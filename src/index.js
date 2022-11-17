@@ -1,9 +1,7 @@
 import './css/styles.css';
 import Notiflix from 'notiflix';
-import axios from 'axios';
-import Handlebars from 'handlebars';
 import photoCardTmp from './templates/card.hbs';
-import ImagesApiService from './fetchImages'
+import ImagesApiService from './fetchImages';
 
 const getEl = selector => document.querySelector(selector);
 const inputRef = getEl('.searc-form__input');
@@ -16,8 +14,7 @@ searchFormRef.addEventListener('submit', (event) => {
     event.preventDefault();
     onSearch();
 });
-
-loadMoreBtn.addEventListener('click', onLoadMore)
+loadMoreBtn.addEventListener('click', onLoadMore);
 
 async function onSearch() {
     if (inputRef.value === '') {
@@ -33,6 +30,7 @@ async function onSearch() {
         clearGalleryContainer();
         totalInfo(images);
         interfaceRender(images);
+        
         if (images.totalHits > 40) {
             showLoadMoreBtn()
         };
