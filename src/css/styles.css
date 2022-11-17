@@ -1,0 +1,83 @@
+:root {
+  --items: 4;
+  --indent: 30px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Сітка flex-box */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--indent));
+  margin-top: calc(-1 * var(--indent));
+}
+
+.card-set-item {
+  flex-basis: calc(100% / var(--items) - var(--indent));
+  margin-left: var(--indent);
+  margin-top: var(--indent);
+}
+
+body {
+  margin: 0;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searc-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to bottom,
+      rgba(13, 211, 112, 0.486),
+      rgba(132, 13, 211, 0));
+}
+
+.searc-form__input {
+  width: 200px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px 0 10px;
+}
+
+.search-form__btn {
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.load-more {
+  width: 50px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(4, 192, 98, 0.753);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+}
+
+/* .photo-card {
+  width: 200px;
+  height: 350px;
+} */
