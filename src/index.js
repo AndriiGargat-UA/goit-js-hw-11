@@ -63,6 +63,8 @@ function totalInfo(images) {
 
 function onFetchError() {
     Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
+    clearGalleryContainer();
+    hideLoadMoreBtn();
 };
 
 function onLoadMoreError() {
